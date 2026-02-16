@@ -1,12 +1,11 @@
 .home-root{
   padding:40px 70px 80px;
-  color:#fff;
-  background:
-    radial-gradient(circle at 30% 10%, #1c1f4a, transparent 40%),
-    radial-gradient(circle at 80% 40%, #351a54, transparent 45%),
-    #050712;
+  color:#ffffff;
+  background:#0b0d18;
   min-height:100vh;
 }
+
+/* ---------------- HERO ---------------- */
 
 .hero{
   display:flex;
@@ -19,16 +18,18 @@
 }
 
 .hero-left h1{
-  font-size:56px;
-  line-height:1.1;
+  font-size:52px;
+  line-height:1.15;
   font-weight:700;
   margin-bottom:18px;
+  letter-spacing:-0.5px;
 }
 
 .hero-left p{
-  color:#c7c7d9;
+  color:#c7c9dd;
   font-size:18px;
   margin-bottom:28px;
+  max-width:520px;
 }
 
 .hero-actions{
@@ -39,25 +40,26 @@
 .btn-primary,
 .btn-secondary{
   padding:12px 22px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.18);
-  background:rgba(255,255,255,0.06);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.04);
   color:white;
   cursor:pointer;
-  backdrop-filter: blur(12px);
-  transition:0.2s;
+  transition:0.2s ease;
 }
 
 .btn-primary{
-  background:linear-gradient(135deg,#4f7cff,#7a4bff);
+  background:#5865f2;
   border:none;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover{
   transform:translateY(-1px);
-  opacity:0.9;
+  opacity:0.92;
 }
+
+/* ---------------- RIGHT PANEL ---------------- */
 
 .hero-right{
   flex:1;
@@ -65,27 +67,31 @@
   justify-content:center;
 }
 
+/* removed all gradient based visuals */
 .fake-network{
   width:460px;
   height:320px;
-  border-radius:22px;
-  background:
-    radial-gradient(circle at 30% 40%, #6fa3ff, transparent 40%),
-    radial-gradient(circle at 70% 60%, #a778ff, transparent 40%),
-    rgba(255,255,255,0.05);
+  border-radius:18px;
+  background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.12);
-  box-shadow:0 0 40px rgba(111,140,255,0.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#9aa1d6;
+  font-size:14px;
 }
 
-/* ---------------- */
+/* ---------------- DISCOVER ---------------- */
 
 .discover{
-  margin-top:60px;
+  margin-top:70px;
 }
 
 .discover h3{
   margin-bottom:22px;
   font-size:22px;
+  font-weight:600;
+  color:#ffffff;
 }
 
 .cards{
@@ -94,43 +100,48 @@
   gap:22px;
 }
 
+/* cleaned glass style – no background images, no blur tricks */
 .glass-card{
   min-height:200px;
-  padding:20px;
-  border-radius:18px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(14px);
-  box-shadow:0 0 25px rgba(110,120,255,0.15);
+  padding:20px 22px;
+  border-radius:16px;
+  background:#12142a;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
 }
 
 .glass-card h4{
   margin-bottom:14px;
+  font-size:16px;
+  font-weight:600;
 }
+
+/* ---------------- RESULTS ---------------- */
 
 .fake-chart{
   height:120px;
-  border-radius:12px;
-  background:
-    radial-gradient(circle at center,#6fa3ff,transparent 60%),
-    rgba(255,255,255,0.06);
+  border-radius:10px;
+  background:#1b1e3a;
+  border:1px solid rgba(255,255,255,0.06);
 }
 
-/* Courses */
+/* ---------------- COURSES ---------------- */
 
 .course span{
   display:block;
   margin-top:6px;
-  color:#cbd5ff;
+  color:#cbd2ff;
+  font-size:14px;
 }
 
 .course small{
   display:block;
   margin-top:6px;
   color:#9aa3c7;
+  font-size:12px;
 }
 
-/* Jobs */
+/* ---------------- JOBS ---------------- */
 
 .job-row{
   display:flex;
@@ -142,22 +153,31 @@
 .job-row small{
   display:block;
   color:#aab0d9;
+  font-size:12px;
 }
 
+.job-info b{
+  font-size:14px;
+  font-weight:600;
+}
+
+/* removed conic-gradient */
 .circle{
-  width:78px;
-  height:78px;
+  width:74px;
+  height:74px;
   border-radius:50%;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   font-weight:700;
-  background:
-    conic-gradient(#5cc8ff 0 330deg, rgba(255,255,255,0.15) 0);
+  background:#1f2350;
+  border:2px solid #5865f2;
+  color:#ffffff;
 }
 
 .circle span{
   font-size:11px;
   font-weight:400;
+  color:#bfc5ff;
 }

@@ -1,9 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
-
 export default function Navbar() {
-  const { darkMode, toggleTheme } = useTheme();
+  const { darkMode } = useTheme();
   const location = useLocation();
 
   const bg = darkMode
@@ -35,12 +34,12 @@ export default function Navbar() {
         top: 0,
         left: 0,
         width: "100%",
-        minHeight: 64,          // FIX: allow wrap height
+        minHeight: 64,
         display: "flex",
         alignItems: "center",
-        flexWrap: "wrap",      // allow items to move to next line
+        flexWrap: "wrap",
         gap: 10,
-        padding: "10px 28px",  // small vertical padding so second row fits
+        padding: "10px 28px",
         background: bg,
         color: text,
         backdropFilter: "blur(12px)",
@@ -50,7 +49,7 @@ export default function Navbar() {
         boxSizing: "border-box"
       }}
     >
-      <b style={{ marginRight: 20 }}>Career Atlas</b>
+      <b style={{ marginRight: 50 }}>Path Pilot</b>
 
       <Link to="/" style={linkStyle("/")}>Home</Link>
       <Link to="/profile" style={linkStyle("/profile")}>Profile</Link>
@@ -63,21 +62,6 @@ export default function Navbar() {
 
       <Link to="/login" style={linkStyle("/login")}>Login</Link>
       <Link to="/signup" style={linkStyle("/signup")}>Sign Up</Link>
-
-      <button
-        onClick={toggleTheme}
-        style={{
-          padding: "6px 12px",
-          borderRadius: 10,
-          background: "transparent",
-          border: "1px solid rgba(255,255,255,0.15)",
-          color: text,
-          cursor: "pointer",
-          whiteSpace: "nowrap"
-        }}
-      >
-        {darkMode ? "Light mode" : "Dark mode"}
-      </button>
     </div>
   );
 }
